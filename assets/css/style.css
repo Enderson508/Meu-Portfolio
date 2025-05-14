@@ -455,19 +455,6 @@ h1, h2, h3, h4 {
     transform: translateY(-3px);
 }
 
-/* Cursor Personalizado */
-.cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    pointer-events: none;
-    mix-blend-mode: difference;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease;
-}
 
 /* Responsivo */
 @media (max-width: 992px) {
