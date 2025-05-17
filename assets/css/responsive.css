@@ -1,12 +1,17 @@
+:root {
+    --transition: all 0.3s ease-in-out;
+}
+
+
 @media (max-width: 992px) {
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.3rem;
     }
-    
+
     .hero-avatar {
         width: 300px;
         height: 300px;
@@ -17,7 +22,7 @@
     .navbar {
         padding: 0 1rem;
     }
-    
+
     .nav-links {
         position: fixed;
         top: 80px;
@@ -30,73 +35,109 @@
         justify-content: center;
         gap: 2rem;
         transition: var(--transition);
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        z-index: 99;
+        display: flex;
     }
-    
+
     .nav-links.active {
         left: 0;
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
     }
-    
+
     .hamburger {
         display: block;
+        cursor: pointer;
     }
-    
+
+    .hamburger .line {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px;
+        transition: var(--transition);
+    }
+
     .hamburger.active .line:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
-    
+
     .hamburger.active .line:nth-child(2) {
         opacity: 0;
     }
-    
+
     .hamburger.active .line:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-    
+
     .hero-container {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
         padding-top: 2rem;
     }
-    
-    .hero-content {
-        margin-bottom: 3rem;
+
+    .hero-avatar {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
     }
-    
+
+    .hero-content {
+        margin-bottom: 2rem;
+    }
+
     .hero-buttons {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
-    
+
     .tech-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
         position: relative;
         margin-top: 2rem;
         bottom: auto;
     }
-    
+
     .about-content,
     .contact-content {
+        display: grid;
         grid-template-columns: 1fr;
     }
 }
 
+/* Media query até 576px */
 @media (max-width: 576px) {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
+        gap: 1rem;
     }
-    
+
     .btn {
         width: 100%;
     }
-    
+
     .hero-avatar {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
     }
-    
+
     .services-grid {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
