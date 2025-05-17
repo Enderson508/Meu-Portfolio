@@ -106,7 +106,7 @@
         justify-content: center;
         gap: 1rem;
         position: relative;
-        margin-top: 10rem;
+        margin-top: 12rem;
         bottom: auto;
     }
 
@@ -132,9 +132,9 @@
     }
 
     .hero-avatar {
-        width: 180px;
+        width: 200px;
         position: absolute;
-        height: 180px;
+        height: 200px;
     }
 
     .services-grid {
